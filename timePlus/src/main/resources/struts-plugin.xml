@@ -1,0 +1,59 @@
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	
+	<package name="siims.vmaque.timePlus.test" namespace="/siims/vmaque/timePlus/test" extends="siims.framework.default">
+		<action name="test" class="com.siims.vmaque.timePlus.self.action.TestAction" method="test">
+			<result name="test" type="freemarker">/ui/ftl/test/test.ftl</result>
+		</action>
+		<action name="add" class="com.siims.vmaque.timePlus.self.action.TestAction" method="addT">
+			<result name="add" type="freemarker">/ui/ftl/test/add.ftl</result>
+		</action>
+		<action name="get" class="com.siims.vmaque.timePlus.self.action.TestAction" method="getT">
+			<result name="get" type="freemarker">/ui/ftl/test/get.ftl</result>
+		</action>
+		<action name="update" class="com.siims.vmaque.timePlus.self.action.TestAction" method="updateT">
+			<result name="update" type="freemarker">/ui/ftl/test/test.ftl</result>
+		</action>
+	</package>
+	
+	<package name="siims.vmaque.timePlus.Axis" namespace="/siims/vmaque/timePlus/axis" extends="siims.framework.default">
+		<action name="create" class="com.siims.vmaque.timePlus.timeaxis.action.CreateAction" method="createAxis"/>
+		<action name="delete" class="com.siims.vmaque.timePlus.timeaxis.action.DeleteAction" method="deleteAxis"/>
+		<action name="publish" class="com.siims.vmaque.timePlus.timeaxis.action.UpdatePublishAction" method="publish"/>
+		<action name="getAllAxisByUserid" class="com.siims.vmaque.timePlus.timeaxis.action.GetAllAxisByUseridAction" method="getAllAxisByUserid"/>
+		<action name="updatePraiseNum" class="com.siims.vmaque.timePlus.timeaxis.action.UpdatePraiseNumAction" method="updatePraiseNum"/>
+		<action name="updateVisitNum" class="com.siims.vmaque.timePlus.timeaxis.action.UpdateVisitNumAction" method="updateVisitNum"/>
+		<action name="getAxisById" class="com.siims.vmaque.timePlus.timeaxis.action.GetAxisByIdAction" method="getAxisById"/>
+	</package>
+	
+	<package name="siims.vmaque.timePlus.Node" namespace="/siims/vmaque/timePlus/node" extends="siims.framework.default">	
+		<action name="create" class="com.siims.vmaque.timePlus.timenode.action.CreateAction" method="createNode"/>		
+		<action name="delete" class="com.siims.vmaque.timePlus.timenode.action.DeleteAction" method="deleteNode"/>
+		<action name="updateTC" class="com.siims.vmaque.timePlus.timenode.action.UpdateTCAction" method="updateTC"/>
+		<action name="getAllNodesByAxisId" class="com.siims.vmaque.timePlus.timenode.action.GetAllNodesByAxisId" method="getAllNodesByAxisId"/>
+	</package>
+	
+	<package name="siims.vmaque.timePlus.Comment" namespace="/siims/vmaque/timePlus/comment" extends="siims.framework.default">
+		<action name="create" class="com.siims.vmaque.timePlus.timecomment.action.CreateAction" method="createComment"/>
+		<action name="getAllCommentsByNodeId" class="com.siims.vmaque.timePlus.timecomment.action.GetAllCommentsByNodeIdAction" method="getAllCommentsByNodeId"/>
+	</package>
+	
+	<package name="siims.vmaque.timePlus.Upload" namespace="/siims/vmaque/timePlus/upload" extends="siims.framework.default">
+		<action name="create" class="com.siims.vmaque.timePlus.timenode.action.CreatePicAction" method="createPic"/>
+		<action name="getAllPicsByNodeId" class="com.siims.vmaque.timePlus.timenode.action.GetAllPicsByNodeId" method="getAllPicsByNodeId"/>
+		<action name="delete" class="com.siims.vmaque.timePlus.timenode.action.DeletePicAction" method="deletePic"/>
+	</package>
+</struts>
+
+
+
+
+
+
+
+
+
