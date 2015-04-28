@@ -7,7 +7,7 @@
 	
 	<package name="siims.vmaque.timePlus.test" namespace="/siims/vmaque/timePlus/test" extends="siims.framework.default">
 		<action name="test" class="com.siims.vmaque.timePlus.self.action.TestAction" method="test">
-			<result name="test" type="freemarker">/ui/ftl/test/test.ftl</result>
+			<result name="test" type="freemarker">/ui/ftl/axis/create.ftl</result>
 		</action>
 		<action name="add" class="com.siims.vmaque.timePlus.self.action.TestAction" method="addT">
 			<result name="add" type="freemarker">/ui/ftl/test/add.ftl</result>
@@ -21,7 +21,9 @@
 	</package>
 	
 	<package name="siims.vmaque.timePlus.Axis" namespace="/siims/vmaque/timePlus/axis" extends="siims.framework.default">
-		<action name="create" class="com.siims.vmaque.timePlus.timeaxis.action.CreateAction" method="createAxis"/>
+		<action name="create" class="com.siims.vmaque.timePlus.timeaxis.action.CreateAction" method="createAxis">
+			<result name="success" type="freemarker">/ui/ftl/axis/create.ftl</result>
+		</action>
 		<action name="delete" class="com.siims.vmaque.timePlus.timeaxis.action.DeleteAction" method="deleteAxis"/>
 		<action name="publish" class="com.siims.vmaque.timePlus.timeaxis.action.UpdatePublishAction" method="publish"/>
 		<action name="getAllAxisByUserid" class="com.siims.vmaque.timePlus.timeaxis.action.GetAllAxisByUseridAction" method="getAllAxisByUserid"/>
